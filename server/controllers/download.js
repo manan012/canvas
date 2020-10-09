@@ -32,19 +32,6 @@ exports.download = (req, res, next) => {
   });
 };
 
-// exports.sendFile = (req, res, next) => {
-//     var data = req.body.data;
-//     const pdf = new jspdf({
-//         orientation: 'landscape',
-//       });
-//       const imgProp = pdf.getImageProperties(base64URL);
-//       const width = pdf.internal.pageSize.getWidth();
-//       const height = (imgProp.height * width) / imgProp.width;
-//       pdf.addImage(base64URL, 'PNG', 0, 0, width, height);
-//       res.setHeader('Content-Type', 'application/pdf');
-//       res.sendFile(pdf);
-
-// }
 
 exports.sendFile = (req, res, next) => {
   var data = req.body.data;
